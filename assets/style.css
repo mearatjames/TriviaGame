@@ -11,10 +11,7 @@ nav {
 .card {
     background: rgba(51, 48, 48, 0.5) !important;
     border: 3px solid rgba(255, 255, 255, 0.6) !important;
-}
-
-.card-height {
-    height: 250px;
+    padding: 0 !important;
 }
 
 .timer {
@@ -22,5 +19,26 @@ nav {
 }
 
 .btn {
+    display: flex !important;
+    justify-content: center;
     margin: 50px auto;
+}
+
+.collection-item {
+    background: rgba(51, 48, 48, 0.5) !important;
+}
+
+.list-group-item {
+    background: rgba(51, 48, 48, 0.5) !important;
+    color: white !important;
+}
+
+a:hover {
+    background: rgba(168, 117, 15, 0.5) !important;
+    transition: 0.7s;
+}
+
+.letter {
+    border: 1px solid white;
+    padding: 4px;
 }

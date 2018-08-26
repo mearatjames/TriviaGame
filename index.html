@@ -7,54 +7,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TriviaGame</title>
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
 </head>
 
 <body>
     <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo center">Citizenship Trivia Game</a>
+        <div class="nav pt-3 pb-3 justify-content-center">
+            <h1 class="text-center text-white">Citizenship Trivia Game</h1>
         </div>
     </nav>
     <div id="firstPage" class="container">
-        <div class="row center timer">
-            <div class="col s8 offset-s2 white-text">
-                <h3>Do you think you can pass the U.S Citizenship test?</h3>
+        <div class="row justify-content-center mt-4">
+            <div class="col text-center">
+                <h2 class="text-white">Do you think you can pass the U.S Citizenship test?</h2>
             </div>
         </div>
-        <div class="row center timer">
-            <div class="col s8 offset-s2 white-text">
-                <button id="start" class="waves-effect waves-light btn-large">Start Game</button>
+        <div class="row justify-content-center">
+            <div class="col align-content-center">
+                <button id="start" type="button" class="btn btn-secondary btn-lg">Start Game</button>
             </div>
         </div>
     </div>
     <div id="gameDiv" class="container">
-        <div class="row center timer">
-            <div class="col s4 offset-s4 white-text">
-                <h1>Timer</h1>
-                <div class="progress">
-                    <div class="determinate" style="width: 10%"></div>
-                </div>
+        <div class="row timer">
+            <div class="col text-center text-white">
+                <h1 id="timer">Timer</h1>
             </div>
         </div>
-        <div class="row center">
-            <div class="card">
-                <div class="card-content card-height white-text">
-                    <h3 class="card-title">Question #</h3>
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col card text-white">
+                    <h3 class="p-2">Question #</h3>
+                    <p class="p-2">I am a very simple card. I am good at containing small bits of information. I am convenient because
                         I require little markup to use effectively.</p>
-                </div>
-                <div class="card-action">
-                    <a id="a" href="#">Answer A</a>
-                    <a id="b" href="#">Answer A</a>
-                    <a id="c" href="#">Answer A</a>
-                    <a id="d" href="#">Answer A</a>
+                        <div class="list-group text-white">
+                            <a href="#" class="list-group-item list-group-item-action"><span class="letter">A</span></a>
+                            <a href="#" class="list-group-item list-group-item-action"><span class="letter">B</span></a>
+                            <a href="#" class="list-group-item list-group-item-action"><span class="letter">C</span></a>
+                            <a href="#" class="list-group-item list-group-item-action"><span class="letter">D</span></a>
+                        </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="assets/app.js"></script>
 </body>

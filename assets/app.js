@@ -1,5 +1,4 @@
 
-
 $(function() {
    $('#gameDiv').hide();
 });
@@ -9,8 +8,3 @@ $('#start').on('click', function() {
     $('#gameDiv').show();
 })
 
-
-
-$('.card-action').on('click', function(){
-    
-})
