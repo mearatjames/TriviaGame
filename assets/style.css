@@ -1,0 +1,26 @@
+body {
+    background-image: url(./images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    background: rgba(51, 48, 48, 0.5) !important;
+}
+
+.card {
+    background: rgba(51, 48, 48, 0.5) !important;
+    border: 3px solid rgba(255, 255, 255, 0.6) !important;
+}
+
+.card-height {
+    height: 250px;
+}
+
+.timer {
+    margin-top: 30px;
+}
+
+.btn {
+    margin: 50px auto;
+}
