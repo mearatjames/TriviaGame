@@ -100,6 +100,16 @@ let questionnaire = [
         ],
         correctAnswer: "fought for civil rights"
     },
+    q11 = {
+        q: "Who was President during the Great Depression and World War II?",
+        answers: [
+            "Franklin Roosevelt",
+            "Calvin Coolidge",
+            "Harry Truman",
+            "Herbert Hoover"           
+        ],
+        correctAnswer: "Franklin Roosevelt"
+    },
 
 ]
 
@@ -112,6 +122,14 @@ let correctAns;
 let selectLock = false;
 let _gameDiv = $('#gameDiv').clone()
 
+//Shuffle questionaire
+function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
 
 //Push Question and Answers to the page
 function display() {
@@ -146,8 +164,8 @@ function checkAns() {
             showAnswer();
         }
     }
-    $('#next').show();
     qNumber++;
+    $('#nextContainer').show();
 }
 
 //Next Question
@@ -158,30 +176,55 @@ function nextQuestion() {
         display();
         timer = 30;
         runTimer();
-        $('#next').hide();
+        $('#nextContainer').hide();
         $('.list-group-item').on('click', checkAns)
         $('#next').on('click', nextQuestion)
+    } else {
+        results ();
     }
 }
-//Show Answer when time is up
 
+//Results Function
+function results() {
+
+let message = (correctCount > 6) ? "Congratulations! You passed the test!" : "You failed. Study some more!"
+    $('#timer').hide();
+    $('#next').text("Restart")
+    $('#card').html(`
+    <h1 class="results" >${message}</h1>
+    <div class="list-group text-white">
+    <h3 class="results">Correct Answer: ${correctCount}</h3>
+    <h3 class="results">Incorrect Answer: ${incorrectCount}</h3>
+    <h3 class="results">Unanswered: ${unanswered}</h3>
+    </div>
+    `)
+    $('#next').on('click', function() {
+        location.reload()
+    })
+}
+
+//Show Answer when time is up
 function showAnswer() {
     selectLock = true;
     $('#question').text("The correct answer is: ")
     $('#answers').replaceWith(correctAns)
-    $('#next').show();
+    $('#nextContainer').show();
+    if (qNumber == 10) {
+        $('#next').text("See Result")
+    }
 }
 
+//Document Ready function
 $(function() {
    $('#gameDiv').hide();
+   shuffle(questionnaire);
 });
 
 //Start Game Click
-
 $('#start').on('click', function() {
     $('#firstPage').remove();
     $('#gameDiv').show();
-    $('#next').hide();
+    $('#nextContainer').hide();
     display();
     runTimer();
 })

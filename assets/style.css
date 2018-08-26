@@ -42,3 +42,8 @@ a:hover {
     border: 1px solid white;
     padding: 4px;
 }
+
+.results {
+    padding: 6px !important;
+    text-shadow: 1px 1px black;
+}
