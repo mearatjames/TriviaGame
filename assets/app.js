@@ -110,6 +110,96 @@ let questionnaire = [
         ],
         correctAnswer: "Franklin Roosevelt"
     },
+    q12 = {
+        q: "Name the U.S. war between the North and the South.",
+        answers: [
+            "The War of 1812",
+            "the Revolutionary War",
+            "World War I",
+            "The Civil War"           
+        ],
+        correctAnswer: "The Civil War"
+    },
+    q13 = {
+        q: "Name one problem that led to the Civil War.",
+        answers: [
+            "westward expansion",
+            "sugar",
+            "oil",
+            "slavery"           
+        ],
+        correctAnswer: "slavery"
+    },
+    q14 = {
+        q: "What are the two parts of the U.S. Congress?",
+        answers: [
+            "the Senate and House of Representatives",
+            "the House of Representatives and the courts",
+            "the House of Lords and the House of Commons",
+            "the Senate and the courts"           
+        ],
+        correctAnswer: "the Senate and House of Representatives"
+    },
+    q15 = {
+        q: "What is the highest court in the United States?",
+        answers: [
+            "the Court of Appeals",
+            "the Federal Court",
+            "the Supreme Court",
+            "the District Court"           
+        ],
+        correctAnswer: "the Supreme Court"
+    },
+    q16 = {
+        q: 'What is the "rule of law"?',
+        answers: [
+            "All laws must be the same in every state",
+            "Everyone but the President must follow the law",
+            "Everyone must follow the law",
+            "Government does not have to follow the law"           
+        ],
+        correctAnswer: "Everyone must follow the law"
+    },
+    q17 = {
+        q: "Name one war fought by the United States in the 1900s.",
+        answers: [
+            "Civil War",
+            "War of 1812",
+            "World War I",
+            "Revolutionary War"           
+        ],
+        correctAnswer: "World War I"
+    },
+    q18 = {
+        q: "Who was President during World War I?",
+        answers: [
+            "Woodrow Wilson",
+            "Theodore Roosevelt",
+            "Warren Harding",
+            "Franklin Roosevelt"           
+        ],
+        correctAnswer: "Woodrow Wilson"
+    },
+    q19 = {
+        q: "Who wrote the Declaration of Independence?",
+        answers: [
+            "James Madison",
+            "Thomas Jefferson",
+            "George Washington",
+            "Abraham Lincoln"           
+        ],
+        correctAnswer: "Thomas Jefferson"
+    },
+    q20 = {
+        q: "Under our Constitution, some powers belong to the states. What is one power of the states?",
+        answers: [
+            "make treaties",
+            "provide schooling and education",
+            "create an army",
+            "coin or print monet"           
+        ],
+        correctAnswer: "provide schooling and education"
+    },
 
 ]
 
@@ -139,7 +229,6 @@ function display() {
         $('#'+(i+1)).append("  " + questionnaire[qNumber-1].answers[i])
         if (questionnaire[qNumber - 1].answers[i] === (questionnaire[qNumber -1].correctAnswer)) {
            ansId = (i+1)
-           console.log(ansId)
            correctAns = $('#' + ansId)
         }
     }
@@ -153,13 +242,11 @@ function checkAns() {
             stop()
             correctCount++;
             $('#timer').text("Correct!")
-            console.log("Correct!")
             showAnswer();
         } else {
             selectLock = false;
             stop();
             incorrectCount++;
-            console.log('Incorrect!')
             $('#timer').text("Incorrect!");
             showAnswer();
         }
