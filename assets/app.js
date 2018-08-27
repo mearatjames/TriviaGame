@@ -273,7 +273,6 @@ function nextQuestion() {
 
 //Results Function
 function results() {
-
 let message = (correctCount > 6) ? "Congratulations! You passed the test!" : "You failed. Study some more!"
     $('#timer').hide();
     $('#next').text("Restart")
@@ -349,6 +348,5 @@ function stop() {
 }
 
 //Eventlistener
-
 $('.list-group-item').on('click', checkAns)
 $('#next').on('click', nextQuestion)
