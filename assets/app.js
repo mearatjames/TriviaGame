@@ -250,8 +250,8 @@ function checkAns() {
             $('#timer').text("Incorrect!");
             showAnswer();
         }
+        qNumber++;
     }
-    qNumber++;
     $('#nextContainer').show();
 }
 
