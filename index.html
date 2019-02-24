@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TriviaGame</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <nav>
+        <div class="nav pt-3 pb-3 justify-content-center">
+            <h1 class="text-center text-white">Citizenship Trivia Game</h1>
+        </div>
+    </nav>
+    <div id="firstPage" class="container">
+        <div class="row justify-content-center mt-4">
+            <div class="col text-center">
+                <h2 class="text-white">Do you think you can pass the U.S Citizenship test?</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col align-content-center">
+                <button id="start" type="button" class="btn btn-secondary btn-lg">Start Game</button>
+            </div>
+        </div>
+    </div>
+    <div id="gameDiv" class="container">
+        <div class="row timer">
+            <div class="col text-center text-white">
+                <h1 id="timer">00:30</h1>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="card" class="col card text-white">
+                    <h3 class="p-2">Question <span id="qNumber"></span></h3>
+                    <p id="question" class="p-2"></p>
+                        <div id="answers" class="list-group text-white">
+                            <a href="#" id="1" class="list-group-item list-group-item-action"><span class="letter">A</span></a>
+                            <a href="#" id="2" class="list-group-item list-group-item-action"><span class="letter">B</span></a>
+                            <a href="#" id="3" class="list-group-item list-group-item-action"><span class="letter">C</span></a>
+                            <a href="#" id="4" class="list-group-item list-group-item-action"><span class="letter">D</span></a>
+                        </div>
+                </div>
+            </div>
+            <div id="nextContainer" class="row justify-content-center">
+                <div class="col align-content-center">
+                    <button id="next" type="button" class="btn btn-secondary btn-lg">Next Question</button>
+                </div>
+            </div>
+        </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="assets/app.js"></script>
+</body>
+
+</html>
